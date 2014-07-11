@@ -1,5 +1,4 @@
 #!/usr/bin/env python
- 
 gobblin_attack = 40
 gobblin1_alive = True
 gobblin2_alive = True
