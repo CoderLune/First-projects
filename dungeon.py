@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 gobblin_attack = 40
 gobblin1_alive = True
 gobblin2_alive = True
@@ -45,7 +45,7 @@ while not end:
         sword = True
         weapon += 5
     elif action == "help":
-        print("Your commands are 'look around', 'move forward', 'move left', 'move right', 'move back', 'stats', 'run away', 'inspect *item and/or monster*,  and 'attack *monster name*'")
+        print("Your commands are 'look around', 'move forward', 'move left', 'move right', 'move back', 'stats', 'take *item*', 'inspect *item and/or monster*,  and 'attack *monster name*'")
     elif action == "stats":
         print("Health:", health, "Attack:", weapon, "Defense:", defense)
     elif action == "move forward":
@@ -374,30 +374,6 @@ while not end:
                         print("You have died!")
                         print("---GAME OVER---")
                         end = True
-                      elif defense == 20:
-                        print("The gobblin hits you for 20 damage!")
-                        health -= 20
-                        if health <= 0:
-                          print("The gobblin killed you!")
-                          print("You have died!")
-                          print("---GAME OVER---")
-                          end = True
-                        elif defense == 10:
-                          print("The gobblin hits you for 30 damage!")
-                          health -= 30
-                          if health <= 0:
-                            print("The gobblin killed you!")
-                            print("You have died!")
-                            print("---GAME OVER---")
-                            end = True
-                          else:
-                            print("The gobblin hits you full force!")
-                            health -= 40
-                            if health <= 0:
-                              print("The gobblin killed you!")
-                              print("You have died!")
-                              print("---GAME OVER---")
-                              end = True                        
                     elif defense == 20:
                       print("The gobblin hits you for 20 damage!")
                       health -= 20
@@ -406,46 +382,6 @@ while not end:
                         print("You have died!")
                         print("---GAME OVER---")
                         end = True
-                      elif gobblin2_alive == False:
-                        print("Get ready for the next round!")
-                      else:
-                        if gobblin2_stunned == True:
-                          print("The second gobblin skips out on attacking and regains control!")
-                          print("The second gobblin is no longer stunned!")
-                        else:
-                          print("The second gobblin attacks!")
-                          if defense == 30:
-                            print("The gobblin hits you for 10 damage!")
-                            health -=10
-                            if health <= 0:
-                              print("The gobblin killed you!")
-                              print("You have died!")
-                              print("---GAME OVER---")
-                              end = True
-                            elif defense == 20:
-                              print("The gobblin hits you for 20 damage!")
-                              health -= 20
-                              if health <= 0:
-                                print("The gobblin killed you!")
-                                print("You have died!")
-                                print("---GAME OVER---")
-                                end = True
-                              elif defense == 10:
-                                print("The gobblin hits you for 30 damage!")
-                                health -= 30
-                                if health <= 0:
-                                  print("The gobblin killed you!")
-                                  print("You have died!")
-                                  print("---GAME OVER---")
-                                  end = True
-                                else:
-                                  print("The gobblin hits you full force!")
-                                  health -= 40
-                                  if health <= 0:
-                                    print("The gobblin killed you!")
-                                    print("You have died!")
-                                    print("---GAME OVER---")
-                                    end = True                        
                     elif defense == 10:
                       print("The gobblin hits you for 30 damage!")
                       health -= 30
@@ -454,46 +390,6 @@ while not end:
                         print("You have died!")
                         print("---GAME OVER---")
                         end = True
-                      elif gobblin2_alive == False:
-                        print("Get ready for the next round!")
-                      else:
-                        if gobblin2_stunned == True:
-                          print("The second gobblin skips out on attacking and regains control!")
-                          print("The second gobblin is no longer stunned!")
-                        else:
-                          print("The second gobblin attacks!")
-                          if defense == 30:
-                            print("The gobblin hits you for 10 damage!")
-                            health -=10
-                            if health <= 0:
-                              print("The gobblin killed you!")
-                              print("You have died!")
-                              print("---GAME OVER---")
-                              end = True
-                            elif defense == 20:
-                              print("The gobblin hits you for 20 damage!")
-                              health -= 20
-                              if health <= 0:
-                                print("The gobblin killed you!")
-                                print("You have died!")
-                                print("---GAME OVER---")
-                                end = True
-                              elif defense == 10:
-                                print("The gobblin hits you for 30 damage!")
-                                health -= 30
-                                if health <= 0:
-                                  print("The gobblin killed you!")
-                                  print("You have died!")
-                                  print("---GAME OVER---")
-                                  end = True
-                                else:
-                                  print("The gobblin hits you full force!")
-                                  health -= 40
-                                  if health <= 0:
-                                    print("The gobblin killed you!")
-                                    print("You have died!")
-                                    print("---GAME OVER---")
-                                    end = True                        
                     else:
                       print("The gobblin hits you full force!")
                       health -= 40
@@ -501,47 +397,151 @@ while not end:
                         print("The gobblin killed you!")
                         print("You have died!")
                         print("---GAME OVER---")
-                        end = True          
-                      elif gobblin2_alive == False:
-                        print("Get ready for the next round!")
-                      else:
-                        if gobblin2_stunned == True:
-                          print("The second gobblin skips out on attacking and regains control!")
-                          print("The second gobblin is no longer stunned!")
-                        else:
-                          print("The second gobblin attacks!")
-                          if defense == 30:
-                            print("The gobblin hits you for 10 damage!")
-                            health -=10
-                            if health <= 0:
-                              print("The gobblin killed you!")
-                              print("You have died!")
-                              print("---GAME OVER---")
-                              end = True
-                            elif defense == 20:
-                              print("The gobblin hits you for 20 damage!")
-                              health -= 20
-                              if health <= 0:
-                                print("The gobblin killed you!")
-                                print("You have died!")
-                                print("---GAME OVER---")
-                                end = True
-                              elif defense == 10:
-                                print("The gobblin hits you for 30 damage!")
-                                health -= 30
-                                if health <= 0:
-                                  print("The gobblin killed you!")
-                                  print("You have died!")
-                                  print("---GAME OVER---")
-                                  end = True
-                                else:
-                                  print("The gobblin hits you full force!")
-                                  health -= 40
-                                  if health <= 0:
-                                    print("The gobblin killed you!")
-                                    print("You have died!")
-                                    print("---GAME OVER---")
-                                    end = True                        
+                        end = True                        
+              elif defense == 20:
+                print("The gobblin hits you for 20 damage!")
+                health -= 20
+                if health <= 0:
+                  print("The gobblin killed you!")
+                  print("You have died!")
+                  print("---GAME OVER---")
+                  end = True
+                elif gobblin2_alive == False:
+                  print("Get ready for the next round!")
+                else:
+                  if gobblin2_stunned == True:
+                    print("The second gobblin skips out on attacking and regains control!")
+                    print("The second gobblin is no longer stunned!")
+                  else:
+                    print("The second gobblin attacks!")
+                    if defense == 30:
+                      print("The gobblin hits you for 10 damage!")
+                      health -=10
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True
+                    elif defense == 20:
+                      print("The gobblin hits you for 20 damage!")
+                      health -= 20
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True
+                    elif defense == 10:
+                      print("The gobblin hits you for 30 damage!")
+                      health -= 30
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True
+                    else:
+                      print("The gobblin hits you full force!")
+                      health -= 40
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True                        
+              elif defense == 10:
+                print("The gobblin hits you for 30 damage!")
+                health -= 30
+                if health <= 0:
+                  print("The gobblin killed you!")
+                  print("You have died!")
+                  print("---GAME OVER---")
+                  end = True
+                elif gobblin2_alive == False:
+                  print("Get ready for the next round!")
+                else:
+                  if gobblin2_stunned == True:
+                    print("The second gobblin skips out on attacking and regains control!")
+                    print("The second gobblin is no longer stunned!")
+                  else:
+                    print("The second gobblin attacks!")
+                    if defense == 30:
+                      print("The gobblin hits you for 10 damage!")
+                      health -=10
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True
+                    elif defense == 20:
+                      print("The gobblin hits you for 20 damage!")
+                      health -= 20
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True
+                    elif defense == 10:
+                      print("The gobblin hits you for 30 damage!")
+                      health -= 30
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True
+                    else:
+                      print("The gobblin hits you full force!")
+                      health -= 40
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True                        
+              else:
+                print("The gobblin hits you full force!")
+                health -= 40
+                if health <= 0:
+                  print("The gobblin killed you!")
+                  print("You have died!")
+                  print("---GAME OVER---")
+                  end = True          
+                elif gobblin2_alive == False:
+                  print("Get ready for the next round!")
+                else:
+                  if gobblin2_stunned == True:
+                    print("The second gobblin skips out on attacking and regains control!")
+                    print("The second gobblin is no longer stunned!")
+                  else:
+                    print("The second gobblin attacks!")
+                    if defense == 30:
+                      print("The gobblin hits you for 10 damage!")
+                      health -=10
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True
+                    elif defense == 20:
+                      print("The gobblin hits you for 20 damage!")
+                      health -= 20
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True
+                    elif defense == 10:
+                      print("The gobblin hits you for 30 damage!")
+                      health -= 30
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True
+                    else:
+                      print("The gobblin hits you full force!")
+                      health -= 40
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True                        
             else:
               print("The first gobblin skips out on attacking and regains control!")
               print("The first gobblin is no longer stunned!")
@@ -570,22 +570,22 @@ while not end:
                         print("You have died!")
                         print("---GAME OVER---")
                         end = True
-                      elif defense == 10:
-                        print("The gobblin hits you for 30 damage!")
-                        health -= 30
-                        if health <= 0:
-                          print("The gobblin killed you!")
-                          print("You have died!")
-                          print("---GAME OVER---")
-                          end = True
-                        else:
-                          print("The gobblin hits you full force!")
-                          health -= 40
-                          if health <= 0:
-                            print("The gobblin killed you!")
-                            print("You have died!")
-                            print("---GAME OVER---")
-                            end = True                                  
+                    elif defense == 10:
+                      print("The gobblin hits you for 30 damage!")
+                      health -= 30
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True
+                    else:
+                      print("The gobblin hits you full force!")
+                      health -= 40
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True                                  
         elif choice == "2":
           print("Attack Gobblin", choice, "with what?")
           choice2 = input("shield/weapon: ")
@@ -677,30 +677,30 @@ while not end:
                         print("You have died!")
                         print("---GAME OVER---")
                         end = True
-                      elif defense == 20:
-                        print("The gobblin hits you for 20 damage!")
-                        health -= 20
-                        if health <= 0:
-                          print("The gobblin killed you!")
-                          print("You have died!")
-                          print("---GAME OVER---")
-                          end = True
-                        elif defense == 10:
-                          print("The gobblin hits you for 30 damage!")
-                          health -= 30
-                          if health <= 0:
-                            print("The gobblin killed you!")
-                            print("You have died!")
-                            print("---GAME OVER---")
-                            end = True
-                          else:
-                            print("The gobblin hits you full force!")
-                            health -= 40
-                            if health <= 0:
-                              print("The gobblin killed you!")
-                              print("You have died!")
-                              print("---GAME OVER---")
-                              end = True                        
+                    elif defense == 20:
+                      print("The gobblin hits you for 20 damage!")
+                      health -= 20
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True
+                    elif defense == 10:
+                      print("The gobblin hits you for 30 damage!")
+                      health -= 30
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True
+                    else:
+                      print("The gobblin hits you full force!")
+                      health -= 40
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True                        
               elif defense == 20:
                 print("The gobblin hits you for 20 damage!")
                 health -= 20
@@ -725,30 +725,30 @@ while not end:
                         print("You have died!")
                         print("---GAME OVER---")
                         end = True
-                      elif defense == 20:
-                        print("The gobblin hits you for 20 damage!")
-                        health -= 20
-                        if health <= 0:
-                          print("The gobblin killed you!")
-                          print("You have died!")
-                          print("---GAME OVER---")
-                          end = True
-                      elif defense == 10:
-                        print("The gobblin hits you for 30 damage!")
-                        health -= 30
-                        if health <= 0:
-                          print("The gobblin killed you!")
-                          print("You have died!")
-                          print("---GAME OVER---")
-                          end = True
-                        else:
-                          print("The gobblin hits you full force!")
-                          health -= 40
-                          if health <= 0:
-                            print("The gobblin killed you!")
-                            print("You have died!")
-                            print("---GAME OVER---")
-                            end = True                        
+                    elif defense == 20:
+                      print("The gobblin hits you for 20 damage!")
+                      health -= 20
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True
+                    elif defense == 10:
+                      print("The gobblin hits you for 30 damage!")
+                      health -= 30
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True
+                    else:
+                      print("The gobblin hits you full force!")
+                      health -= 40
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True                        
               elif defense == 10:
                 print("The gobblin hits you for 30 damage!")
                 health -= 30
@@ -773,30 +773,30 @@ while not end:
                         print("You have died!")
                         print("---GAME OVER---")
                         end = True
-                      elif defense == 20:
-                        print("The gobblin hits you for 20 damage!")
-                        health -= 20
-                        if health <= 0:
-                          print("The gobblin killed you!")
-                          print("You have died!")
-                          print("---GAME OVER---")
-                          end = True
-                        elif defense == 10:
-                          print("The gobblin hits you for 30 damage!")
-                          health -= 30
-                          if health <= 0:
-                            print("The gobblin killed you!")
-                            print("You have died!")
-                            print("---GAME OVER---")
-                            end = True
-                          else:
-                            print("The gobblin hits you full force!")
-                            health -= 40
-                            if health <= 0:
-                              print("The gobblin killed you!")
-                              print("You have died!")
-                              print("---GAME OVER---")
-                              end = True                        
+                    elif defense == 20:
+                      print("The gobblin hits you for 20 damage!")
+                      health -= 20
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True
+                    elif defense == 10:
+                      print("The gobblin hits you for 30 damage!")
+                      health -= 30
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True
+                    else:
+                      print("The gobblin hits you full force!")
+                      health -= 40
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True                        
               else:
                 print("The gobblin hits you full force!")
                 health -= 40
@@ -821,30 +821,30 @@ while not end:
                         print("You have died!")
                         print("---GAME OVER---")
                         end = True
-                      elif defense == 20:
-                        print("The gobblin hits you for 20 damage!")
-                        health -= 20
-                        if health <= 0:
-                          print("The gobblin killed you!")
-                          print("You have died!")
-                          print("---GAME OVER---")
-                          end = True
-                        elif defense == 10:
-                          print("The gobblin hits you for 30 damage!")
-                          health -= 30
-                          if health <= 0:
-                            print("The gobblin killed you!")
-                            print("You have died!")
-                            print("---GAME OVER---")
-                            end = True
-                          else:
-                            print("The gobblin hits you full force!")
-                            health -= 40
-                            if health <= 0:
-                              print("The gobblin killed you!")
-                              print("You have died!")
-                              print("---GAME OVER---")
-                              end = True                        
+                    elif defense == 20:
+                      print("The gobblin hits you for 20 damage!")
+                      health -= 20
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True
+                    elif defense == 10:
+                      print("The gobblin hits you for 30 damage!")
+                      health -= 30
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True
+                    else:
+                      print("The gobblin hits you full force!")
+                      health -= 40
+                      if health <= 0:
+                        print("The gobblin killed you!")
+                        print("You have died!")
+                        print("---GAME OVER---")
+                        end = True                        
             else:
               print("The second gobblin skips out on attacking and regains control!")
               print("The second gobblin is no longer stunned!")
@@ -865,30 +865,30 @@ while not end:
                       print("You have died!")
                       print("---GAME OVER---")
                       end = True
-                    elif defense == 20:
-                      print("The gobblin hits you for 20 damage!")
-                      health -= 20
-                      if health <= 0:
-                        print("The gobblin killed you!")
-                        print("You have died!")
-                        print("---GAME OVER---")
-                        end = True
-                      elif defense == 10:
-                        print("The gobblin hits you for 30 damage!")
-                        health -= 30
-                        if health <= 0:
-                          print("The gobblin killed you!")
-                          print("You have died!")
-                          print("---GAME OVER---")
-                          end = True
-                        else:
-                          print("The gobblin hits you full force!")
-                          health -= 40
-                          if health <= 0:
-                            print("The gobblin killed you!")
-                            print("You have died!")
-                            print("---GAME OVER---")
-                            end = True                        
+                  elif defense == 20:
+                    print("The gobblin hits you for 20 damage!")
+                    health -= 20
+                    if health <= 0:
+                      print("The gobblin killed you!")
+                      print("You have died!")
+                      print("---GAME OVER---")
+                      end = True
+                  elif defense == 10:
+                    print("The gobblin hits you for 30 damage!")
+                    health -= 30
+                    if health <= 0:
+                      print("The gobblin killed you!")
+                      print("You have died!")
+                      print("---GAME OVER---")
+                      end = True
+                  else:
+                    print("The gobblin hits you full force!")
+                    health -= 40
+                    if health <= 0:
+                      print("The gobblin killed you!")
+                      print("You have died!")
+                      print("---GAME OVER---")
+                      end = True                        
           else:
             print("Sorry, please type 'weapon' or 'shield'")
         else:
@@ -945,8 +945,6 @@ while not end:
       print("You can't escape!")
     else:
       print("You don't have any other options, just follow the script.")
-
-
 #Room 7
   if room == 7:
     if emerald_bribe == True:
@@ -1035,7 +1033,6 @@ while not end:
       print("You have died!")
       print("---GAME OVER---")
       end = True
-
 #Room 9 (gobblin 2 attack)
   if room == 9:
     print("Attack the second gobblin with what?")
@@ -1071,30 +1068,30 @@ while not end:
             print("You have died!")
             print("---GAME OVER---")
             end = True
-          elif defense == 20:
-            print("The gobblin hits you for 20 damage!")
-            health -= 20
-            if health <= 0:
-              print("The gobblin killed you!")
-              print("You have died!")
-              print("---GAME OVER---")
-              end = True
-          elif defense == 10:
-            print("The gobblin hits you for 30 damage!")
-            health -= 30
-            if health <= 0:
-              print("The gobblin killed you!")
-              print("You have died!")
-              print("---GAME OVER---")
-              end = True
-          else:
-            print("The gobblin hits you full force!")
-            health -= 40
-            if health <= 0:
-              print("The gobblin killed you!")
-              print("You have died!")
-              print("---GAME OVER---")
-              end = True                        
+        elif defense == 20:
+          print("The gobblin hits you for 20 damage!")
+          health -= 20
+          if health <= 0:
+            print("The gobblin killed you!")
+            print("You have died!")
+            print("---GAME OVER---")
+            end = True
+        elif defense == 10:
+          print("The gobblin hits you for 30 damage!")
+          health -= 30
+          if health <= 0:
+            print("The gobblin killed you!")
+            print("You have died!")
+            print("---GAME OVER---")
+            end = True
+        else:
+          print("The gobblin hits you full force!")
+          health -= 40
+          if health <= 0:
+            print("The gobblin killed you!")
+            print("You have died!")
+            print("---GAME OVER---")
+            end = True                        
       elif gobblin2_stunned == True:
         print("The gobblin skips out on attacking and regains control!")
         print("The gobblin is no longer stunned!")
@@ -1138,30 +1135,30 @@ while not end:
             print("You have died!")
             print("---GAME OVER---")
             end = True
-          elif defense == 20:
-            print("The gobblin hits you for 20 damage!")
-            health -= 20
-            if health <= 0:
-              print("The gobblin killed you!")
-              print("You have died!")
-              print("---GAME OVER---")
-              end = True
-          elif defense == 10:
-            print("The gobblin hits you for 30 damage!")
-            health -= 30
-            if health <= 0:
-              print("The gobblin killed you!")
-              print("You have died!")
-              print("---GAME OVER---")
-              end = True
-          else:
-            print("The gobblin hits you full force!")
-            health -= 40
-            if health <= 0:
-              print("The gobblin killed you!")
-              print("You have died!")
-              print("---GAME OVER---")
-              end = True                        
+        elif defense == 20:
+          print("The gobblin hits you for 20 damage!")
+          health -= 20
+          if health <= 0:
+            print("The gobblin killed you!")
+            print("You have died!")
+            print("---GAME OVER---")
+            end = True
+        elif defense == 10:
+          print("The gobblin hits you for 30 damage!")
+          health -= 30
+          if health <= 0:
+            print("The gobblin killed you!")
+            print("You have died!")
+            print("---GAME OVER---")
+            end = True
+        else:
+          print("The gobblin hits you full force!")
+          health -= 40
+          if health <= 0:
+            print("The gobblin killed you!")
+            print("You have died!")
+            print("---GAME OVER---")
+            end = True                        
       elif gobblin1_stunned == True:
         print("The gobblin skips out on attacking and regains control!")
         print("The gobblin is no longer stunned!")
